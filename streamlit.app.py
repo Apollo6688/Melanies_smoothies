@@ -4,8 +4,8 @@ from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
 
 import requests    
-moothiefroot_response = requests.get("https://my.SMOOTHIEFROOT.com/api/fruit/watermelon")
-st.text(smoothiefroot_response) 
+moothiefroot_response = requests.get("https://https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response.jason()) 
 
 helpful_links = [
     "https://docs.streamlit.io",
