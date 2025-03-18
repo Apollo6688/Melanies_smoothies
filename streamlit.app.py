@@ -5,7 +5,7 @@ from snowflake.snowpark.functions import col
 
 import requests    
 moothiefroot_response = requests.get("https://https://my.smoothiefroot.com/api/fruit/watermelon")
-st.text(smoothiefroot_response.jason()) 
+st.text(smoothiefroot_response.json()) 
 
 helpful_links = [
     "https://docs.streamlit.io",
