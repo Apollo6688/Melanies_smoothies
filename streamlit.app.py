@@ -4,7 +4,7 @@ from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
 
 import requests    
-moothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+moothiefroot_response = requests.get("https://my.SMOOTHIEFROOT.com/api/fruit/watermelon")
 st.text(smoothiefroot_response) 
 
 helpful_links = [
