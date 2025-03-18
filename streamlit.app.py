@@ -14,16 +14,12 @@ helpful_links = [
 st.title(":cup_with_straw: Customize Your Smoothies :cup_with_straw:")
 st.write("Choose the fruits you want in your custom Smoothie!")
 
-
 title = st.text_input("Name on smoothie:")
 st.write("The name on your smoothie will be:",title)
-
-
 
 session = get_active_session()
 my_dataframe = session.table("smoothies.public.fruit_options").select (col('fruit_name'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
-
 
 ingredients_list = st.multiselect(
     "Choose up to five ingredients:"
