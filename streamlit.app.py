@@ -18,7 +18,14 @@ st.write("Choose the fruits you want in your custom Smoothie!")
 title = st.text_input("Name on smoothie:")
 st.write("The name on your smoothie will be:",title)
 
-session = get_active_session()
+try:
+    session = sp.context.get_active_session()
+# Your code using the active session
+except SnowparkSessionException as e:
+    print(f"Error: {e}")
+    # Handle the exception, e.g., by creating a new session
+    session = sp.Session.builder.configs(<your_config>).create()
+    
 my_dataframe = session.table("smoothies.public.fruit_options").select (col('fruit_name'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
 
