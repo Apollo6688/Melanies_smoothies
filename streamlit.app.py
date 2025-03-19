@@ -24,7 +24,7 @@ try:
 except SnowparkSessionException as e:
     print(f"Error: {e}")
     # Handle the exception, e.g., by creating a new session
-    session = sp.Session.builder.configs(<your_config>).create()
+    session = sp.Session.builder.create()
     
 my_dataframe = session.table("smoothies.public.fruit_options").select (col('fruit_name'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
