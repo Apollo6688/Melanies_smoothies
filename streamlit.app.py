@@ -16,7 +16,7 @@ st.write("Choose the fruits you want in your custom Smoothie!")
 title = st.text_input("Name on smoothie:")
 st.write("The name on your smoothie will be:",title)
 
-cnx = st.connection("snowlake")
+cnx = st.connection("snowflake")
 session = cnx.session()
 my_dataframe = session.table("smoothies.public.fruit_options").select (col('fruit_name'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
